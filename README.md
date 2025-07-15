@@ -148,10 +148,12 @@ O projeto é voltado para:
 
 | Nome                          | GitHub Profile                                      |
 |-------------------------------|-----------------------------------------------------|
+| Evelyn Siqueira Duarte        | [Github](https://github.com/evelynduarte02)         |
 | Expedita Faria Nogueira       | [GitHub](https://github.com/ExpeditaNogueira)       |
 | Jonnattan da Silva Santos     | [GitHub](https://github.com/JonnattanSS)            |
 | Lucas Assunção Goebel Almeida | [GitHub](https://github.com/lgoebel)                |
 | Luís Gustavo dos Santos Lima  | [GitHub](https://github.com/LGSLima)                |
+| Matheus Soares Marzagão       | [Github]()                                          |
 
 ---
 
@@ -326,10 +328,12 @@ The project targets:
 
 | Name                          | GitHub Profile                                      |
 |-------------------------------|-----------------------------------------------------|
+| Evelyn Siqueira Duarte        | [Github](https://github.com/evelynduarte02)         |
 | Expedita Faria Nogueira       | [GitHub](https://github.com/ExpeditaNogueira)       |
 | Jonnattan da Silva Santos     | [GitHub](https://github.com/JonnattanSS)            |
 | Lucas Assunção Goebel Almeida | [GitHub](https://github.com/lgoebel)                |
 | Luís Gustavo dos Santos Lima  | [GitHub](https://github.com/LGSLima)                |
+| Matheus Soares Marzagão       | [Github]()                                          |
 
 ---
 
@@ -504,10 +508,12 @@ El proyecto está dirigido a:
 
 | Nombre                          | Perfil de GitHub                                      |
 |----------------------------------|------------------------------------------------------|
-| Expedita Faria Nogueira         | [GitHub](https://github.com/ExpeditaNogueira)        |
-| Jonnattan da Silva Santos       | [GitHub](https://github.com/JonnattanSS)             |
-| Lucas Assunção Goebel Almeida   | [GitHub](https://github.com/lgoebel)                 |
-| Luís Gustavo dos Santos Lima    | [GitHub](https://github.com/LGSLima)                 |
+| Evelyn Siqueira Duarte           | [Github](https://github.com/evelynduarte02)          |
+| Expedita Faria Nogueira          | [GitHub](https://github.com/ExpeditaNogueira)        |
+| Jonnattan da Silva Santos        | [GitHub](https://github.com/JonnattanSS)             |
+| Lucas Assunção Goebel Almeida    | [GitHub](https://github.com/lgoebel)                 |
+| Luís Gustavo dos Santos Lima     | [GitHub](https://github.com/LGSLima)                 |
+| Matheus Soares Marzagão          | [Github]()                                           |
 
 ---
 
