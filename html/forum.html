@@ -180,8 +180,73 @@
                     </div>
                 </div>
 
+                
+
                 <!-- Lista de Discussões -->
                 <div class="col-lg-9">
+                    <div class="card mb-4">
+                        <div class="card-header bg-unity3 text-white">
+                            <h5 class="mb-0"><i class="bi bi-check2-circle me-2"></i> Prioridades da Comunidade</h5>
+                        </div>
+                        <div class="card-body">
+                            <h6>Vote nas prioridades para sua comunidade:</h6>
+                            <div class="priority-list priority-voting">
+                                <div class="priority-item d-flex justify-content-between align-items-center p-3 mb-2 border rounded">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="communityPriority" id="priority1" checked>
+                                        <label class="form-check-label" for="priority1">
+                                            <strong>Melhoria no abastecimento de água</strong>
+                                            <p class="small mb-0">Bairros X e Y sofrem com falta d'água 3 dias por semana</p>
+                                        </label>
+                                    </div>
+                                    <span class="badge bg-unity3 rounded-pill">1,245 votos</span>
+                                </div>
+                                
+                                <div class="priority-item d-flex justify-content-between align-items-center p-3 mb-2 border rounded">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="communityPriority" id="priority2">
+                                        <label class="form-check-label" for="priority2">
+                                            <strong>Pavimentação de ruas</strong>
+                                            <p class="small mb-0">5 ruas sem pavimentação no bairro central</p>
+                                        </label>
+                                    </div>
+                                    <span class="badge bg-unity3 rounded-pill">987 votos</span>
+                                </div>
+                                
+                                <div class="priority-item d-flex justify-content-between align-items-center p-3 mb-2 border rounded">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="communityPriority" id="priority3">
+                                        <label class="form-check-label" for="priority3">
+                                            <strong>Ampliação da rede de esgoto</strong>
+                                            <p class="small mb-0">30% das residências sem conexão com rede</p>
+                                        </label>
+                                    </div>
+                                    <span class="badge bg-unity3 rounded-pill">756 votos</span>
+                                </div>
+                                
+                                <div class="priority-item d-flex justify-content-between align-items-center p-3 mb-2 border rounded">
+                                    <div class="form-check">
+                                        <input class="form-check-input" type="radio" name="communityPriority" id="priority4">
+                                        <label class="form-check-label" for="priority4">
+                                            <strong>Construção de escola</strong>
+                                            <p class="small mb-0">Demanda por 500 novas vagas escolares</p>
+                                        </label>
+                                    </div>
+                                    <span class="badge bg-unity3 rounded-pill">632 votos</span>
+                                </div>
+                            </div>
+                            
+                            <button class="btn btn-unity mt-3 w-100" onclick="setupPriorityVoting()">
+                                <i class="bi bi-check2 me-2"></i> Confirmar Voto
+                            </button>
+                            
+                            <div class="progress mt-3" style="height: 10px;">
+                                <div class="progress-bar bg-unity3" style="width: 45%"></div>
+                            </div>
+                            <small class="text-muted">45% da comunidade já votou. Votação encerra em 15 dias.</small>
+                        </div>
+                    </div>
+
                     <ul class="nav nav-pills mb-4">
                         <li class="nav-item">
                             <a class="nav-link active" href="#"><i class="bi bi-chat-dots"></i> Todas as Discussões</a>

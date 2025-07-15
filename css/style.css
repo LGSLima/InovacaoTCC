@@ -55,6 +55,12 @@ body {
 .btn-unity4:hover { background-color: var(--color-unity5); }
 .btn-unity5:hover { background-color: var(--color-unity1); }
 
+.bg-light-warning { background-color: rgba(255,193,7,0.15); }
+.bg-light-primary { background-color: rgba(13,110,253,0.15); }
+.bg-light-success { background-color: rgba(25,135,84,0.15); }
+.alert-item { transition: all 0.3s; }
+.alert-item:hover { transform: translateX(5px); }
+
 /* Navegação */
 .navbar {
     background-color: white;

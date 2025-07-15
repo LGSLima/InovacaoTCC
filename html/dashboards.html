@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-<head>
-        <!-- Definindo o conjunto de caracteres UTF-8 e a meta tag de visualização responsiva para dispositivos móveis -->
+	<head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta http-equiv="X-UA-Compatible" content="ie=edge">
@@ -156,35 +155,46 @@
                                 </div>
                             </div>
                         </div>
-                        <div class="col-lg-4">
-                            <div class="dashboard-card h-100 d-flex flex-column">
-                                <div class="card-header bg-unity3 text-white">
-                                    <h5 class="mb-0"><i class="bi bi-speedometer2 me-2"></i> Métricas Chave</h5>
-                                </div>
-                                <div class="card-body">
-                                    <div class="metric-item text-center p-3">
-                                        <h2 class="text-unity3">1,245</h2>
-                                        <p class="mb-0">Total de Problemas</p>
-                                        <small class="text-success"><i class="bi bi-arrow-up"></i> 12% no último mês</small>
+                    <div class="col-lg-4">
+                        <div class="dashboard-card h-100 d-flex flex-column">
+                            <div class="card-header bg-unity3 text-white">
+                                <h5 class="mb-0"><i class="bi bi-exclamation-triangle me-2"></i> Alertas Rápidos</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert-list">
+                                    <div class="alert-item d-flex align-items-start mb-3 p-3 border rounded bg-light-warning">
+                                        <i class="bi bi-droplet text-danger fs-4 me-3"></i>
+                                        <div>
+                                            <h6 class="mb-1">Falta de água crítica</h6>
+                                            <p class="small mb-0">Bairro X sem abastecimento há 72h</p>
+                                            <small class="text-muted">Atualizado: hoje 09:15</small>
+                                        </div>
                                     </div>
-                                    <hr>
-                                    <div class="metric-item text-center p-3">
-                                        <h2 class="text-unity3">78%</h2>
-                                        <p class="mb-0">Taxa de Resolução</p>
-                                        <small class="text-success"><i class="bi bi-arrow-up"></i> 5% desde o último trimestre</small>
+                                    
+                                    <div class="alert-item d-flex align-items-start mb-3 p-3 border rounded bg-light-primary">
+                                        <i class="bi bi-cone-striped text-warning fs-4 me-3"></i>
+                                        <div>
+                                            <h6 class="mb-1">Obra emergencial</h6>
+                                            <p class="small mb-0">Interdição na Rua Y até 18/06</p>
+                                            <small class="text-muted">Postado: ontem 14:30</small>
+                                        </div>
                                     </div>
-                                    <hr>
-                                    <div class="metric-item text-center p-3">
-                                        <h2 class="text-unity3">3.2 dias</h2>
-                                        <p class="mb-0">Tempo Médio de Resposta</p>
-                                        <small class="text-danger"><i class="bi bi-arrow-down"></i> 0.8 dias desde o último mês</small>
+                                    
+                                    <div class="alert-item d-flex align-items-start p-3 border rounded bg-light-success">
+                                        <i class="bi bi-check-circle text-success fs-4 me-3"></i>
+                                        <div>
+                                            <h6 class="mb-1">Problema resolvido</h6>
+                                            <p class="small mb-0">Iluminação pública no Parque Z</p>
+                                            <small class="text-muted">Concluído: 10/06 08:45</small>
+                                        </div>
                                     </div>
-                                </div>
-                                <div class="card-footer bg-unity3 text-center">
-                                    <small class="text-light">Atualizado em tempo real</small>
                                 </div>
                             </div>
+                            <div class="card-footer bg-unity3 text-center">
+                                <small class="text-light">Atualizado em tempo real</small>
+                            </div>
                         </div>
+                    </div>
                     </div>
 
                     <!-- Linha 2: Gráfico de Linha e Simulador -->
@@ -262,84 +272,52 @@
                         </div>
                     </div>
 
-                    <!-- Linha 3: Prioridades Comunitárias e Relatórios -->
+                    <!-- Linha 3: Indicadores Chave e Relatórios -->
                     <div class="row g-4">
                         <div class="col-lg-6">
-                            <div class="dashboard-card h-100">
+                            <div class="dashboard-card h-100 d-flex flex-column">
                                 <div class="card-header bg-unity3 text-white">
-                                    <h5 class="mb-0"><i class="bi bi-people-fill me-2"></i> Prioridades da Comunidade</h5>
+                                    <h5 class="mb-0"><i class="bi bi-speedometer2 me-2"></i> Indicadores Chave</h5>
                                 </div>
                                 <div class="card-body">
-                                    <div class="priority-voting mb-4">
-                                        <h6>Vote nas prioridades para sua comunidade:</h6>
-                                        <div class="list-group">
-                                            <div class="list-group-item d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <input class="form-check-input me-2" type="radio" name="priorityvote" id="priority1" checked>
-                                                    <label class="form-check-label" for="priority1">Melhoria no abastecimento de água</label>
+                                    <div class="row text-center">
+                                        <div class="col-md-4 mb-3">
+                                            <div class="metric-box p-3">
+                                                <h3 class="text-unity3">1,245</h3>
+                                                <small>Problemas Reportados</small>
+                                                <div class="progress progress-thin mt-2">
+                                                    <div class="progress-bar bg-success" style="width: 65%"></div>
                                                 </div>
-                                                <span class="badge bg-unity3 rounded-pill">1,245 votos</span>
-                                            </div>
-                                            <div class="list-group-item d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <input class="form-check-input me-2" type="radio" name="priorityvote" id="priority2">
-                                                    <label class="form-check-label" for="priority2">Pavimentação de ruas</label>
-                                                </div>
-                                                <span class="badge bg-unity3 rounded-pill">987 votos</span>
-                                            </div>
-                                            <div class="list-group-item d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <input class="form-check-input me-2" type="radio" name="priorityvote" id="priority3">
-                                                    <label class="form-check-label" for="priority3">Ampliação da rede de esgoto</label>
-                                                </div>
-                                                <span class="badge bg-unity3 rounded-pill">756 votos</span>
-                                            </div>
-                                            <div class="list-group-item d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <input class="form-check-input me-2" type="radio" name="priorityvote" id="priority4">
-                                                    <label class="form-check-label" for="priority4">Construção de escola</label>
-                                                </div>
-                                                <span class="badge bg-unity3 rounded-pill">632 votos</span>
-                                            </div>
-                                            <div class="list-group-item d-flex justify-content-between align-items-center">
-                                                <div>
-                                                    <input class="form-check-input me-2" type="radio" name="priorityvote" id="priority5">
-                                                    <label class="form-check-label" for="priority5">Posto de saúde 24h</label>
-                                                </div>
-                                                <span class="badge bg-unity3 rounded-pill">521 votos</span>
+                                                <small class="text-muted">65% resolvidos</small>
                                             </div>
                                         </div>
-                                        <button class="btn btn-outline-unity3 mt-3 w-100" id="enviar-votos" onclick="setupPriorityVoting()">Enviar Votos</button>
-                                    </div>
-                                    <div class="priority-status">
-                                        <h6>Status das Demandas:</h6>
-                                        <div class="demand-tracker">
-                                            <div class="demand-item">
-                                                <div class="demand-header">
-                                                    <span class="demand-title">Ampliação da rede de esgoto - Bairro X</span>
-                                                    <span class="badge bg-success">Aprovado</span>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="metric-box p-3">
+                                                <h3 class="text-unity3">78%</h3>
+                                                <small>Satisfação da Comunidade</small>
+                                                <div class="progress progress-thin mt-2">
+                                                    <div class="progress-bar bg-warning" style="width: 78%"></div>
                                                 </div>
-                                                <div class="demand-progress">
-                                                    <div class="progress" style="height: 8px;">
-                                                        <div class="progress-bar bg-success" role="progressbar" style="width: 65%;" aria-valuenow="65" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                    <small class="text-muted">Obra em andamento (65% concluído)</small>
-                                                </div>
+                                                <small class="text-muted">+12% desde o último mês</small>
                                             </div>
-                                            <div class="demand-item">
-                                                <div class="demand-header">
-                                                    <span class="demand-title">Posto de saúde 24h - Bairro Y</span>
-                                                    <span class="badge bg-warning text-dark">Em análise</span>
+                                        </div>
+                                        <div class="col-md-4 mb-3">
+                                            <div class="metric-box p-3">
+                                                <h3 class="text-unity3">3.2</h3>
+                                                <small>Tempo Médio de Resposta (dias)</small>
+                                                <div class="progress progress-thin mt-2">
+                                                    <div class="progress-bar bg-danger" style="width: 40%"></div>
                                                 </div>
-                                                <div class="demand-progress">
-                                                    <div class="progress" style="height: 8px;">
-                                                        <div class="progress-bar bg-warning" role="progressbar" style="width: 10%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
-                                                    </div>
-                                                    <small class="text-muted">Aguardando aprovação de verba</small>
-                                                </div>
+                                                <small class="text-muted">Meta: 2 dias</small>
                                             </div>
                                         </div>
                                     </div>
+                                    <div class="alert alert-info mt-3">
+                                        <i class="bi bi-info-circle me-2"></i> Estes indicadores são atualizados diariamente com base nos dados coletados.
+                                    </div>
+                                </div>
+                                <div class="card-footer bg-unity3">
+                                    <small class="text-light">Atualizado em: <?= date('d/m/Y H:i') ?></small>
                                 </div>
                             </div>
                         </div>
@@ -396,8 +374,10 @@
                                                 <option value="semanal">Resumo Semanal</option>
                                             </select>
                                         </div>
-                                        <button class="btn btn-unity mt-3 w-100">Salvar Configurações</button>
                                     </div>
+                                </div>
+                                <div class="card-footer bg-unity3 text-center">
+                                    <button class="btn btn-light w-100">Salvar Configurações</button>
                                 </div>
                             </div>
                         </div>
