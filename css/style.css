@@ -121,6 +121,178 @@ body {
     transform: translateY(-2px);
 }
 
+/* Dashboard Controls */
+.dashboard-controls {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.dashboard-card {
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.dashboard-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+}
+
+.dashboard-card .card-header {
+    padding: 1rem 1.5rem;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.dashboard-card .card-body {
+    padding: 1.5rem;
+}
+
+.dashboard-card .card-footer {
+    padding: 0.75rem 1.5rem;
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+/* Estilos para a votação de prioridades */
+.priority-voting .list-group-item {
+    border-left: none;
+    border-right: none;
+    padding: 0.75rem 1rem;
+}
+
+.priority-voting .list-group-item:first-child {
+    border-top: none;
+}
+
+.priority-voting .list-group-item:last-child {
+    border-bottom: none;
+}
+
+/* Estilos para o rastreador de demandas */
+.demand-item {
+    padding: 0.75rem 0;
+    border-bottom: 1px solid #eee;
+}
+
+.demand-item:last-child {
+    border-bottom: none;
+}
+
+.demand-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.5rem;
+}
+
+.demand-title {
+    font-weight: 500;
+}
+
+.demand-progress {
+    margin-top: 0.5rem;
+}
+
+/* Estilos para botões personalizados */
+.btn-outline-unity3 {
+    color: var(--color-unity3);
+    border-color: var(--color-unity3);
+}
+
+.btn-outline-unity3:hover {
+    background-color: var(--color-unity3);
+    color: white;
+}
+
+.progress-bar {
+    color: black;
+    overflow: visible;
+}
+
+/* Forum Styles */
+.forum-header {
+    background: linear-gradient(135deg, var(--color-unity3), var(--color-unity1));
+    color: white;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+}
+
+.nav-pills .nav-link.active {
+    background-color: var(--color-unity3);
+}
+
+.nav-pills .nav-link {
+    color: var(--color-unity3);
+}
+
+.discussion-card {
+    border-left: 4px solid var(--color-unity3);
+    transition: all 0.3s;
+    margin-bottom: 1rem;
+}
+
+.discussion-card:hover {
+    transform: translateX(5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.status-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+
+.priority-tag {
+    display: inline-block;
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    font-size: 0.75rem;
+    font-weight: bold;
+}
+
+.priority-high {
+    background-color: #ffebee;
+    color: #c62828;
+}
+
+.priority-medium {
+    background-color: #fff8e1;
+    color: #f57f17;
+}
+
+.priority-low {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.vote-btn {
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.vote-btn:hover {
+    transform: scale(1.1);
+}
+
+.vote-count {
+    font-weight: bold;
+    margin: 0 0.5rem;
+}
+
+.progress-thin {
+    height: 8px;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
 /* Painel de login */
 .login-panel {
     background: linear-gradient(rgba(75, 66, 120, 0.8), rgba(75, 66, 120, 0.8)), 
@@ -653,5 +825,9 @@ body {
 
     .signup-header h1 {
         font-size: 1.8rem;
+    }
+    
+    .dashboard-card {
+        margin-bottom: 1.5rem;
     }
 }
