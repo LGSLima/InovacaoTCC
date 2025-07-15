@@ -11,6 +11,10 @@ Um site intuitivo e interativo será criado para atender a esse propósito, ofer
 
 ---
 
+Preview da Plataforma - [Unity Plus](https://lgslima.github.io/InovacaoTCC/)
+
+---
+
 ## 🛠 Funcionalidades Essenciais
 
 ### **1. Design Intuitivo**
