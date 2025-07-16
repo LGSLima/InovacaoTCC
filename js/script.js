@@ -127,11 +127,11 @@ function modalBaixaPreview() {
         </div>
 
         <div class="modal-footer">
-            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
-                <i class="bi bi-pencil me-2"></i>Corrigir Dados
-            </button>
             <button type="button" class="btn btn-success" id="btn-confirmar-envio" data-bs-dismiss="modal" onclick="mostrarAlerta()">
                 <i class="bi bi-send-check me-2"></i>Confirmar Envio
+            </button>
+            <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
+                <i class="bi bi-pencil me-2"></i>Corrigir Dados
             </button>
         </div>
     `;
@@ -144,6 +144,7 @@ function mostrarAlerta() {
     const alerta = `
         <div class="alert alert-success alert-dismissible fade show" role="alert" style="position: fixed; left: 2%; top: 2%; z-index: 10; ">
             <p class="fw-bold">Seu formulário foi enviado com sucesso!</p>
+            <p class="fw-bold">Protocolo: BP2025-1607-1951.</p>
             <span>Acompanhe o andamento em seu perfil.</span>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
         </div>
