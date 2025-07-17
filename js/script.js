@@ -175,7 +175,7 @@ function addCardReport() {
     };
 
     const card = document.createElement('div');
-    card.className = 'card mb-3 shadow priority-card col-lg-5 col-md-6 low h-100';
+    card.className = 'card mb-3 shadow priority-card col-lg-6 low h-100';
 
     card.innerHTML = `
         <div class="card-body">
