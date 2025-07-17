@@ -155,13 +155,49 @@
                                 </div>
                             </div>
                         </div>
-                    <div class="col-lg-4">
-                        <div class="dashboard-card h-100 d-flex flex-column">
+                    <div class="col-lg-4 d-flex flex-column justify-content-between">
+
+                        <!-- Formulário de Pesquisa -->
+                        <div class="dashboard-card  d-flex flex-column">
+                            <div class="card-header bg-unity3 text-white">
+                                <h5 class="mb-0"><i class="bi bi-bell me-2"></i> Chamados</h5>
+                            </div>
+                            <div class="card-body">
+                                <div class="alert-list">
+                                    <h6 class="mb-1">Pesquisar Protocolo</h6>
+                                    <form action="#" method="POST">
+                                        <div class="mb-3">
+                                            <label for="protocol-search" class="form-label">Acompanhamento de chamdos</label>
+                                            <input type="text" class="form-control" id="protocol-search" placeholder="Número do protocolo">
+                                        </div>
+                                        <div class="mb-3">
+                                            <label for="filter" class="form-label">Filtro de Status</label>
+                                            <select class="form-select" id="filter">
+                                                <option value="all">Todos</option>
+                                                <option value="open">Aguardando</option>
+                                                <option value="em-treatment">Em Tratamento</option>
+                                                <option value="resolved">Resolvido</option>
+                                                <option value="closed">Fechado</option>
+                                            </select>
+                                        </div>
+                                        <div class="col-md-6 col-lg-12 d-flex align-items-center">
+                                            <button type="button" class="btn btn-unity w-100" data-bs-toggle="modal" data-bs-target="#protocolModal">Buscar Chamados</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="card-footer bg-unity3 text-center">
+                                <small class="text-light">Total de chamados 1,245 </small>
+                            </div>
+                        </div>
+
+                        <div class="dashboard-card  d-flex flex-column">
                             <div class="card-header bg-unity3 text-white">
                                 <h5 class="mb-0"><i class="bi bi-exclamation-triangle me-2"></i> Alertas Rápidos</h5>
                             </div>
                             <div class="card-body">
                                 <div class="alert-list">
+
                                     <div class="alert-item d-flex align-items-start mb-3 p-3 border rounded bg-light-warning">
                                         <i class="bi bi-droplet text-danger fs-4 me-3"></i>
                                         <div>
@@ -317,7 +353,7 @@
                                     </div>
                                 </div>
                                 <div class="card-footer bg-unity3">
-                                    <small class="text-light">Atualizado em: <?= date('d/m/Y H:i') ?></small>
+                                    <small class="text-light">Atualizado em: 16/07/2025</small>
                                 </div>
                             </div>
                         </div>
@@ -460,6 +496,112 @@
                 </div>
             </div>
         </footer>
+
+        <div class="modal fade" id="protocolModal" tabindex="-1" aria-labelledby="protocolModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content rounded">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="protocolModalLabel">
+                            <i class="bi bi-eye-fill me-2"></i>Detalhes do Chamado - Protocolo BP2025-1607-1925
+                        </h5>
+                        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Fechar"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Informações do Chamado -->
+                        <div class="preview-section mb-4">
+                            <h6 class="fw-bold border-bottom pb-2 mb-3">
+                                <i class="bi bi-book me-2"></i>Chamado em Tratamento
+                            </h6>
+                            <div class="row">
+                                <div class="col-md-6 mb-2">
+                                    <span class="text-muted">Responsável pela demanda:</span>
+                                    <span class="d-block fw-medium">Carlos Pedro</span>
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <span class="text-muted">Cargo/função:</span>
+                                    <span class="d-block fw-medium">COTUR - Coordenador do turno</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Informações Pessoais -->
+                        <div class="preview-section mb-4">
+                            <h6 class="fw-bold border-bottom pb-2 mb-3">
+                                <i class="bi bi-person-badge me-2"></i>Dados Pessoais
+                            </h6>
+                            <div class="row">
+                                <div class="col-md-6 mb-2">
+                                    <span class="text-muted">CPF:</span>
+                                    <span class="d-block fw-medium">123.456.789-00</span>
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <span class="text-muted">Telefone:</span>
+                                    <span class="d-block fw-medium">(37) 12345-2466</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Localização -->
+                        <div class="preview-section mb-4">
+                            <h6 class="fw-bold border-bottom pb-2 mb-3">
+                                <i class="bi bi-geo-alt me-2"></i>Localização
+                            </h6>
+                            <div class="row">
+                                <div class="col-md-6 mb-2">
+                                    <span class="text-muted">Comunidade:</span>
+                                    <span class="d-block fw-medium">Bairro X</span>
+                                </div>
+                                <div class="col-md-6 mb-2">
+                                    <span class="text-muted">Data:</span>
+                                    <span class="d-block fw-medium">15/07/2025 22:30</span>
+                                </div>
+                                <div class="col-md-12 mb-2">
+                                    <span class="text-muted">Coordenadas:</span>
+                                    <span class="d-block fw-medium">-19.8123, -43.9345</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Detalhes do Problema -->
+                        <div class="preview-section mb-4">
+                            <h6 class="fw-bold border-bottom pb-2 mb-3">
+                                <i class="bi bi-exclamation-triangle me-2"></i>Detalhes do Problema
+                            </h6>
+                            <div class="row">
+                                <div class="col-md-6 mb-2">
+                                    <span class="text-muted">Tipo:</span>
+                                    <span class="d-block fw-medium">Falta de água</span>
+                                </div>
+                                <div class="col-md-12 mb-2">
+                                    <span class="text-muted">Descrição:</span>
+                                    <p class="bg-light p-3 rounded mt-2">Problema no fornecimento de água no Bairro X, interrupção desde as 12:00.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Anexos -->
+                        <div class="preview-section">
+                            <h6 class="fw-bold border-bottom pb-2 mb-3">
+                                <i class="bi bi-paperclip me-2"></i>Anexos
+                            </h6>
+                            <div class="d-flex flex-wrap gap-2">
+                                <span class="badge text-bg-secondary">imagem-relato.jpg</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer d-flex justify-content-center">
+                        <button type="button" id="run-simulation" class="btn btn-unity w-40 mx-2" data-bs-dismiss="modal">
+                            <i class="bi bi-pencil me-2"></i>Atualizar chamado
+                        </button>
+                        <button type="button" id="run-simulation" class="btn btn-secondary w-40 mx-2" data-bs-dismiss="modal">
+                            <i class="bi bi-send-check me-2"></i>Finalizar chamado
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        
 
         <a href="#" class="arrow-up">
             <i class="bi-arrow-up"></i>
