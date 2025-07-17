@@ -34,7 +34,8 @@ body {
 .bg-unity3 { background-color: var(--color-unity3); color: #ffffff; }
 .bg-unity4 { background-color: var(--color-unity4); color: #ffffff; }
 .bg-unity5 { background-color: var(--color-unity5); color: #ffffff; }
-.bg-light   { background-color: var(--color-light); color: #000000 }
+.bg-light  { background-color: var(--color-light); color: #000000; }
+.bg-dark   { background-color: var(--color-dark); color: #ffffff; }
 
 .text-unity1 { color: var(--color-unity1); }
 .text-unity2 { color: var(--color-unity2); }
@@ -112,19 +113,35 @@ body {
 
 /* Botão principal */
 .btn-unity {
-    background-color: var(--color-unity3);
+    background-color: var(--color-unity1);
+    border: 1.5px solid var(--color-dark);
     color: white;
     padding: 0.6rem 1.5rem;
     border-radius: 50px;
     font-weight: 600;
     transition: all 0.3s ease;
-    border: none;
 }
 
 .btn-unity:hover {
-    background-color: var(--color-unity1);
-    color: white;
+    background-color: var(--color-light);
+    border-color: var(--color-dark);
+    color: var(--color-dark);
     transform: translateY(-2px);
+}
+
+.form-check-input:checked, .form-check-input:checked:focus {
+    background-color: var(--color-unity3) !important;
+    border-color: var(--color-unity3) !important;
+    box-shadow: 0 0 0 0.2rem rgba(192, 132, 252, 0.25) !important;
+}
+
+.form-check-input:focus {
+    border-color: var(--color-unity3) !important;
+    box-shadow: 0 0 0 0.2rem rgba(192, 132, 252, 0.25) !important;
+}
+
+.form-check-input:focus {
+    outline: var(--color-unity3) !important;
 }
 
 /* Dashboard Controls */
@@ -136,14 +153,14 @@ body {
 .dashboard-card {
     background-color: white;
     border-radius: 10px;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .dashboard-card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
 
 .dashboard-card .card-header {
@@ -225,11 +242,15 @@ body {
 }
 
 .nav-pills .nav-link.active {
-    background-color: var(--color-unity3);
+    background-color: var(--color-unity1);
+}
+
+.nav-pills .nav-link.active::after {
+    display: none;
 }
 
 .nav-pills .nav-link {
-    color: var(--color-unity3);
+    color: var(--color-unity1);
 }
 
 .discussion-card {
@@ -247,6 +268,23 @@ body {
     position: absolute;
     top: 15px;
     right: 15px;
+}
+
+.page-item.active .page-link {
+    background-color: var(--color-unity1) !important;
+    border-color: var(--color-unity1) !important;
+}
+
+.page-link {
+    color: var(--color-unity1);
+}
+
+.bg-primary {
+    background: var(--color-unity2) !important;
+}
+
+.border-primary {
+    border-color: var(--color-unity2) !important;
 }
 
 .priority-tag {
@@ -381,7 +419,7 @@ body {
 .feature-item {
     display: flex;
     align-items: center;
-    border-left: 4px solid var(--color-unity4);
+    border-left: 4px solid var(--color-unity5);
     padding-left: 1rem;
 }
 
@@ -770,6 +808,22 @@ body {
     background-color: var(--color-unity2);
     z-index: 10;
     transition: all 0.4s ease;
+}
+
+.user {
+    position: fixed;
+    display: flex;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    color: var(--color-light);
+    right: 2rem;
+    top: 0.7rem;
+    width: 14rem;
+    background-color: var(--color-unity4);
+    z-index: 10;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
 }
 
 .modal-header {

@@ -127,7 +127,7 @@ function modalBaixaPreview() {
         </div>
 
         <div class="modal-footer">
-            <button type="button" class="btn btn-success" id="btn-confirmar-envio" data-bs-dismiss="modal" onclick="mostrarAlerta()">
+            <button type="button" class="btn btn-success" id="btn-confirmar-envio" data-bs-dismiss="modal">
                 <i class="bi bi-send-check me-2"></i>Confirmar Envio
             </button>
             <button type="button" class="btn btn-outline-secondary" data-bs-dismiss="modal">
@@ -137,19 +137,101 @@ function modalBaixaPreview() {
     `;
 
     modalContent.innerHTML = content;
+    setTimeout(() => {
+        const confirmBtn = document.getElementById('btn-confirmar-envio');
+        if (confirmBtn) {
+            confirmBtn.addEventListener('click', () => {
+                mostrarAlerta();
+                addCardReport();
+            });
+        }
+    }, 10);
     modal.show();
 }
 
 function mostrarAlerta() {
     const alerta = `
         <div class="alert alert-success alert-dismissible fade show" role="alert" style="position: fixed; left: 2%; top: 2%; z-index: 10; ">
-            <p class="fw-bold">Seu formulário foi enviado com sucesso!</p>
+            <p class="fw-bold">Seu relato foi enviado com sucesso!</p>
             <p class="fw-bold">Protocolo: BP2025-1607-1951.</p>
-            <span>Acompanhe o andamento em seu perfil.</span>
+            <span>Você também por acompanhar o andamento do seu relato em em seu perfil.</span>
             <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Fechar"></button>
         </div>
     `;
     document.getElementById('alertPlaceholder').innerHTML = alerta;
+}
+
+function addCardReport() {
+    const cardContainer = document.getElementById('report-container');
+    const reportData = {
+        cpf: document.getElementById('cpf-baixa').value,
+        comunity: document.getElementById('comun-baixa').value,
+        date: document.getElementById('data-baixa').value,
+        tel: document.getElementById('tel-baixa').value,
+        coords: document.getElementById('coords-bai').value,
+        problemType: document.getElementById('tipo-baixa').value,
+        problemDesc: document.getElementById('desc-baixa').value,
+        attachments: document.getElementById('anexo-baixa').files
+    };
+
+    const card = document.createElement('div');
+    card.className = 'card mb-3 shadow priority-card col-lg-5 col-md-6 low h-100';
+
+    card.innerHTML = `
+        <div class="card-body">
+            <i class="bi bi-check-circle-fill text-success priority-indicator"></i>
+            <h5 class="card-title text-success mb-4">Relato de Baixa Prioridade</h5>
+            <p class="mb-3"><strong><i class="bi bi-tags-fill text-success me-2"></i> Protocolo:</strong> BP2025-1607-1951</p>
+            <div class="row g-3 mb-3">
+                <div class="col-md-6">
+                    <p class="mb-2"><strong><i class="bi bi-person-vcard-fill text-success me-2"></i> CPF:</strong> ${reportData.cpf}</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-2"><strong><i class="bi bi-people-fill text-success me-2"></i> Comunidade:</strong> ${reportData.comunity}</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-2"><strong><i class="bi bi-calendar-check-fill text-success me-2"></i> Data:</strong> ${reportData.date}</p>
+                </div>
+                <div class="col-md-6">
+                    <p class="mb-2"><strong><i class="bi bi-telephone-fill text-success me-2"></i> Telefone:</strong> ${reportData.tel}</p>
+                </div>
+                <div class="col-12">
+                    <p class="mb-2"><strong><i class="bi bi-geo-alt-fill text-success me-2"></i> Coordenadas:</strong> ${reportData.coords}</p>
+                </div>
+                <div class="col-12">
+                    <p class="mb-2"><strong><i class="bi bi-tag-fill text-success me-2"></i> Tipo de Problema:</strong> ${reportData.problemType}</p>
+                </div>
+                <div class="col-12">
+                    <p class="mb-2"><strong><i class="bi bi-chat-left-text-fill text-success me-2"></i> Descrição:</strong></p>
+                    <div class="alert bg-light-success p-3 rounded">
+                        ${reportData.problemDesc}
+                    </div>
+                </div>
+                <div class="col-12">
+                    <p class="mb-2"><strong><i class="bi bi-paperclip text-success me-2"></i> Anexos:</strong></p>
+                    <div class="d-flex flex-wrap gap-2">
+                        ${reportData.attachments.length > 0 
+                            ? attachmentsList(reportData.attachments) 
+                            : '<span class="badge bg-light text-dark">Nenhum anexo</span>'}
+                    </div>
+                </div>
+            </div>
+            
+            <div class="d-flex justify-content-between align-items-center mt-4">
+                <span class="badge bg-success">Baixa Prioridade</span>
+                <span class="badge bg-unity2">Em Tratamento</span>
+                <span class="text-muted small">Previsão: 30 dias</span>
+            </div>
+        </div>
+    `
+
+    cardContainer.appendChild(card);
+}
+
+function attachmentsList(fileList) {
+    return Array.from(fileList)
+        .map(file => `<span class="badge bg-secondary me-1">${file.name}</span>`)
+        .join('');
 }
 
 // Função para simular votação
